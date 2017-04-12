@@ -1,0 +1,15 @@
+{
+  "name": "neo6m",
+  "version": "1.0.0",
+  "description": "NEO-6m GPS module by u-Blox library.",
+  "main": "neo6m.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sawaiz",
+  "license": "ISC",
+  "dependencies": {
+    "raspi": "^3.0.5",
+    "raspi-i2c": "^5.0.3"
+  }
+}
