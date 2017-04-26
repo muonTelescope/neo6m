@@ -1,39 +1,34 @@
 # NEO6M GPS Library
 Communicates and prases GPS strings from a NEO-6M module connected via I2C.
 
-## Use
-
-In order to communicate with the I2C bus, installing the rpi-i2C libary is required as well as its dependecy raspi
-
+### Use
+For example, to use it on your project instantiate the library, and call the data function. As it accesses hardware features, you need sudo to run it. The constructor requires the I2C address of the slave. Include it in your `package.json` dependency tree with
+```javascript
+"dependencies": {
+  "neo6m": "muonTelescope/neo6m"
+}
 ```
-npm install --save raspi raspi-i2c
+And run `npm install`, or just install and save the dependency with
 ```
-
+npm install --save muonTelescope/neo6m
+```
 Include the module in your file.
-
-```js
-var NEO6m = require('./neo6m');
+```javascript
+var NEO6m = require("neo6m");
 ```
-
-### Call
+#### Call
 After importing the module a new object is created.
-
-```js
+```javascript
 var gps = new NEO6m();
 ```
-
 Then to get the data object, calling 
-
-```js
+```javascript
 gps.data();
 ```
-
 Returns a formatted response.
-
-### Response
+#### Response
 The response is a javascript object 
-
-```js
+```javascript
 { time: 2016-11-14T07:20:12.000Z,
   latitude: 33.7535,
   longitude: -84.38733333333333,
@@ -45,11 +40,8 @@ The response is a javascript object
   VDOP: 11.13,
   vaild: true }
 ```
-
-## Raw NEMA String
-
+##### Raw NEMA String
 Here is a raw NEMA string for a location in Atlanta, GA. When getting a gps Lock is difficult or for development it is essential to have.
-
 ```text
 $GPRMC,022012.00,A,3345.21805,N,08423.24701,W,0.229,,141016,,,A*69
 $GPVTG,,T,,M,0.229,N,0.424,K,A*28
