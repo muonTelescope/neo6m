@@ -1,5 +1,5 @@
 # NEO6M GPS Library
-Communicates and prases GPS strings from a NEO-6M module connected via I2C.
+Communicates and parses GPS strings from a NEO-6M module connected via I2C.
 
 ### Use
 For example, to use it on your project instantiate the library, and call the data function. As it accesses hardware features, you need sudo to run it. The constructor requires the I2C address of the slave. Include it in your `package.json` dependency tree with
